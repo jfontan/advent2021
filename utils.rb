@@ -8,7 +8,7 @@ def numbers_from_string(str)
 end
 
 def lines_from_file(name)
-    File.readlines(name)
+    File.readlines(name).map {|s| s.strip }
 end
 
 def numbers_from_file(name)
