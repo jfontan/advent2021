@@ -1,7 +1,7 @@
 
 require "rspec"
 require "../utils"
-require "./01"
+require "./advent"
 
 test_input = <<EOT
 199
@@ -28,6 +28,20 @@ RSpec.describe 'advent' do
             data = numbers_from_file('input.txt')
             res = first(data)
             expect(res).to eq(1527)
+        end
+    end
+
+    describe 'second' do
+        it 'returns correct test value' do
+            data = numbers_from_string(test_input)
+            res = second(data)
+            expect(res).to eq(5)
+        end
+
+        it 'calculates the second result' do
+            data = numbers_from_file('input.txt')
+            res = second(data)
+            expect(res).to eq(1575)
         end
     end
 end
